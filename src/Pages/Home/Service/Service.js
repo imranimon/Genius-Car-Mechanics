@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Serice.css'
 
 const Service = (props) => {
-    const { id, name, description, price, img, time } = props.service;
+    const { _id, name, description, price, img } = props.service;
     return (
         <div className='col-lg-4 col-md-6 col-12'>
 
@@ -14,10 +14,9 @@ const Service = (props) => {
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
                         <p>Price: {price}</p>
-                        <p>Time needed: {time}hr</p>
                         {description}
                     </Card.Text>
-                    <Link to={`booking/${id}`}>
+                    <Link to={`booking/${_id}`}>
                         <Button variant="primary">
                             Book "{name}"
                         </Button>
